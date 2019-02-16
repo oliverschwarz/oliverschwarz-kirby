@@ -9,6 +9,7 @@ I will track only the required backend resources to run the site. This usually c
 * `assets/`
   * `htaccess` - the htaccess file, contains server config & security/data privacy measures
   * `css/` - contains the layout (incl. normalize.css)
+  * `images/` - contains all images used throughout the site
 * `site/`
   * `snippets/` - contains all the snippets used throughout the website (header, footer, nav)
   * `templates/` - contains all existing templates
