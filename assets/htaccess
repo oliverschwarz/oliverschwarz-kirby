@@ -1,0 +1,69 @@
+# https://raymii.org/s/tutorials/HTTP_Strict_Transport_Security_for_Apache_NGINX_and_Lighttpd.html
+Header always set Strict-Transport-Security max-age=31536000
+
+# https://content-security-policy.com/
+Header set Content-Security-Policy "default-src 'self';"
+
+# (German) http://www.golem.de/news/cross-site-scripting-javascript-code-in-bilder-einbetten-1411-110264-2.html
+Header set X-Content-Type-Options "nosniff"
+
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+Header always append X-Frame-Options NONE
+
+# http://stackoverflow.com/questions/9090577/what-is-the-http-header-x-xss-protection
+Header set x-xss-protection "1; mode=block"
+
+# Kirby .htaccess
+
+# rewrite rules
+<IfModule mod_rewrite.c>
+
+  RewriteEngine on
+
+  RewriteCond %{SERVER_PORT} !^443$ [NC]
+  RewriteRule ^(.*)$ https://oliverschwarz.info/$1 [r=301,L]
+
+  RewriteCond %{HTTP_HOST} ^www\.oliverschwarz\.info$ [NC]
+  RewriteRule ^(.*)$ https://oliverschwarz.info/$1 [r=301,L]
+
+  RewriteBase /
+
+  RewriteRule (^|/)\.(?!well-known\/) index.php [L]
+  RewriteRule ^content/(.*)\.(txt|md|mdown)$ index.php [L]
+  RewriteRule ^site/(.*) index.php [L]
+  SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+  RewriteRule ^kirby/(.*) index.php [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*) index.php [L]
+
+</IfModule>
+
+# Gzip compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css
+</IfModule>
+
+# Gzip compression using mod_filter
+<IfModule mod_filter.c>
+    AddOutputFilterByType DEFLATE "text/css" "text/html"
+</IfModule>
+
+# ETags
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+
+FileETag None
+
+# Control cache/expiry
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresDefault                          "access plus 1 month"
+    ExpiresByType text/css                  "access plus 1 year"
+    ExpiresByType image/vnd.microsoft.icon  "access plus 1 week"
+    ExpiresByType image/x-icon              "access plus 1 week"
+    ExpiresByType text/html                 "access plus 0 seconds"
+    ExpiresByType image/jpeg                "access plus 1 month"
+    ExpiresByType image/png                 "access plus 1 month"
+</IfModule>
