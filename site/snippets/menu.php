@@ -1,4 +1,3 @@
-<!-- page navigation -->
 <nav>
   <ul>
     <li><a href="<?php echo $site->url(); ?>">Home</a></li>
