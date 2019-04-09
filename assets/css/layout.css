@@ -79,9 +79,27 @@ h1, h2, h3, h4 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1.main-headline {
+  margin-top: 1em;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: .1em;
+  font-weight: normal;
+  margin-top: 5em;
+  border-bottom: 1px solid #ccc;
+}
+
 figure {
   margin: 0;
   padding: 0;
+}
+
+figure img {
+  text-align: center;
+  width: 100%;
 }
 
 figcaption {
@@ -100,6 +118,17 @@ a:link {
   color: #354653;
 }
 
+/* micro-clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
 /* Article list
    ========================================================================== */
 
@@ -110,11 +139,12 @@ a:link {
 }
 
 .article-list li {
-  margin: 0;
+  margin: 0 0 2em 0;
   padding: 0;
 }
 
-.article-list li h3 a {
+.article-list h2 a,
+.article-list h3 a {
   text-decoration: none;
 }
 
@@ -122,7 +152,15 @@ a:link {
    ========================================================================== */
 
 .page-footer {
-  padding: 4em 0;  
+}
+
+.page-footer .separator {
+  margin: 2em 0;
+  text-align: center;
+}
+
+nav {
+  padding-bottom: 2em;
 }
 
 nav ul {
@@ -139,6 +177,9 @@ nav ul li {
 @media screen and (min-width: 48em) {
   body, html {
     font-size: 1.2em;
+  }
+  p, li {
+    line-height: 1.7;
   }
   .content {
     margin: 0 auto;

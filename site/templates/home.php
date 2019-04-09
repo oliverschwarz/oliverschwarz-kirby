@@ -1,7 +1,7 @@
 <?php snippet('meta'); ?>
 
-  <header class="content">
-    <h1><?php echo $page->title()->html() ?></h1>
+  <header class="home content">
+    <h1 class="main-headline"><?php echo $page->title()->html() ?></h1>
     <figure>
       <img src="home/oliver-c.jpg" alt="Oliver auf der NightlyBuild 2016">
       <figcaption>&copy; Photo taken by/with thanks to <a href="https://marcthiele.com/">Marc Thiele</a> - <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA 2.0</a></figcaption>
@@ -23,7 +23,7 @@
         </li>
 <?php endforeach; ?>
       </ul>
-      <p><a href="<?php echo page('articles')->url(); ?>">See all articles</a></p>
+      <p>&rarr; <a href="<?php echo page('articles')->url(); ?>">See all articles</a>...</p>
     </article>
 
     <article>

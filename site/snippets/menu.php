@@ -1,4 +1,4 @@
-<nav>
+<nav class="cf">
   <ul>
     <li><a href="<?php echo $site->url(); ?>">Home</a></li>
 <?php foreach ($site->children()->listed() as $item): ?>
