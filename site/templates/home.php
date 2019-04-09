@@ -14,7 +14,7 @@
       <?php echo $page->text()->kirbytext(); ?>
     </article>
 
-    <article>
+    <article class="article-list">
       <h2>Latest articles</h2>
       <ul>
 <?php $articles = page('articles')->children()->listed()->flip()->limit(3); foreach ($articles as $article): ?>
