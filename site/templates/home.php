@@ -1,31 +1,31 @@
 <?php snippet('meta'); ?>
 
-  <header>
+  <header class="content">
     <h1><?php echo $page->title()->html() ?></h1>
-    <figure>
-      <img src="home/oliver-c.jpg" alt="Oliver auf der NightlyBuild 2016">
-      <figcaption>&copy; Photo taken by/with thanks to <a href="https://marcthiele.com/">Marc Thiele</a> - <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA 2.0</a></figcaption>
-    </figure>
   </header>
 
-  <main>
-    <article class="content">
+  <figure>
+    <img src="home/oliver-c.jpg" alt="Oliver auf der NightlyBuild 2016">
+    <figcaption>&copy; Photo taken by/with thanks to <a href="https://marcthiele.com/">Marc Thiele</a> - <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA 2.0</a></figcaption>
+  </figure>
+
+  <main class="content">
+    <article>
       <?php echo $page->text()->kirbytext(); ?>
     </article>
 
-    <h2>Latest articles</h2>
-<?php $articles = page('articles')->children()->listed()->flip()->limit(3); foreach ($articles as $article): ?>
-
     <article>
-      <h3><a href="<?php echo $article->url(); ?>"><?php echo $article->title()->html(); ?></a></h3>
-      <p>
-        <?php echo $article->text()->excerpt(200) ?> &rarr; <a href="<?php echo $article->url(); ?>">read on!</a>
-      </p>
-    </article>
-
+      <h2>Latest articles</h2>
+      <ul>
+<?php $articles = page('articles')->children()->listed()->flip()->limit(3); foreach ($articles as $article): ?>
+        <li>
+          <h3><a href="<?php echo $article->url(); ?>"><?php echo $article->title()->html(); ?></a></h3>
+          <p><?php echo $article->text()->excerpt(200) ?> &rarr; <a href="<?php echo $article->url(); ?>">read on!</a></p>
+        </li>
 <?php endforeach; ?>
-
-    <p><a href="<?php echo page('articles')->url(); ?>">See all articles</a></p>
+      </ul>
+      <p><a href="<?php echo page('articles')->url(); ?>">See all articles</a></p>
+    </article>
 
     <article>
       <h2>Talks</h2>

@@ -1,10 +1,10 @@
 <?php snippet('meta'); ?>
 
-    <header>
+    <header class="content">
       <h1><?php echo $page->title()->html() ?></h1>
     </header>
 
-    <main class="article">
+    <main class="content article">
       <article>
         <?php echo $page->text()->kirbytext(); ?>
       </article>

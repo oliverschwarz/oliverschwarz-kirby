@@ -1,11 +1,11 @@
 <?php snippet('meta'); ?>
 
-  <header>
+  <header class="content">
     <h1><?php echo $page->title()->html() ?></h1>
     <?= $page->text()->kirbytext() ?>
   </header>
 
-  <main class="article-list">
+  <main class="content article-list">
 
 <?php foreach($page->children()->listed()->flip() as $article): ?>
 
