@@ -22,6 +22,3 @@
   <meta property="og:description" content="Oliver is a developer, musician, runner and family man living in the Cologne area in Germany. Join me on Twitter or Strava or see me talking on some events.">
 
 </head>
-<body>
-
-<!-- /meta -->
