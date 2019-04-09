@@ -148,6 +148,16 @@ a:link {
   text-decoration: none;
 }
 
+/* Article
+   ========================================================================== */
+
+.article-info {
+  border-top: 7px solid #ccc;
+  font-style: italic;
+  color: #999;
+  padding-top: .5em;
+}
+
 /* Navigation (Footer)
    ========================================================================== */
 
