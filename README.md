@@ -11,6 +11,7 @@ I will track only the required backend resources to run the site. This usually c
   * `css/` - contains the layout (incl. normalize.css)
   * `images/` - contains all images used throughout the site
 * `site/`
+  * `blueprints/` - contains the required blueprints for pages, articles and the blog
   * `snippets/` - contains all the snippets used throughout the website (header, footer, nav)
   * `templates/` - contains all existing templates
 
