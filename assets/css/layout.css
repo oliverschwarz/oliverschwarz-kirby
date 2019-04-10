@@ -304,6 +304,9 @@ a:visited {
   padding: 1em 0 1.5em;
 }
 
+/* Simple screens (>600px)
+   ========================================================================== */
+
 @media screen and (min-width: 600px) {
   body, html {
     font-size: 1.2em;
@@ -312,6 +315,9 @@ a:visited {
     margin: 3em 0 2em;
   }
 }
+
+/* Large screens
+   ========================================================================== */
 
 @media screen and (min-width: 60em) {
   p, li {
