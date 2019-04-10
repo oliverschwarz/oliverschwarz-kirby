@@ -72,24 +72,29 @@ html, body {
 }
 
 .content {
-  margin: 0 .5em;
+  margin: 0 1em;
 }
 
 h1, h2, h3, h4 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1.main-headline {
-  margin-top: 1em;
+.home h1 {
+  margin-top: 2em;
 }
 
-h2 {
-  text-transform: uppercase;
-  font-size: .8em;
-  letter-spacing: .1em;
-  font-weight: normal;
-  margin-top: 5em;
+.section-headline {
   border-bottom: 1px solid #ccc;
+  color: #999;
+  font-size: .8em;
+  font-weight: normal;
+  letter-spacing: .3em;
+  margin-top: 6em;
+  text-transform: uppercase;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
 }
 
 figure {
@@ -118,6 +123,10 @@ a:link {
   color: #354653;
 }
 
+a:visited {
+  color: #6788A1;
+}
+
 /* micro-clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .cf:before,
 .cf:after {
@@ -131,6 +140,15 @@ a:link {
 
 /* Article list
    ========================================================================== */
+
+.article-list h3 {
+  font-weight: normal;
+  margin: 0;
+}
+
+.article-list p {
+  margin-top: .5em;
+}
 
 .article-list ul {
   list-style: none;
@@ -158,38 +176,72 @@ a:link {
   padding-top: .5em;
 }
 
-/* Navigation (Footer)
+/* Main website: Home;
    ========================================================================== */
 
-.page-footer {
+.home img {
+  box-shadow: 0 2px 2px #999;
 }
+
+.home h1 {
+  color: #fff;
+  margin: -2.2em 0 1.2em 0;
+  text-align: center;
+}
+
+/* Footer
+   ========================================================================== */
 
 .page-footer .separator {
   margin: 2em 0;
   text-align: center;
 }
 
-nav {
-  padding-bottom: 2em;
-}
-
-nav ul {
+.nav-footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-nav ul li {
-  float: left;
-  margin: 0 1em 0 0;
+.nav-footer ul li {
+  /* float: left; */
+  display: inline;
 }
 
-@media screen and (min-width: 48em) {
+.nav-footer li a {
+  display: inline-block;
+  background-color: #eee;
+  border-radius: .3em;
+  margin: .2em .8em .2em 0;
+  padding: .2em .4em;  
+}
+
+.nav-footer li a:hover,
+.nav-footer li a:focus,
+.nav-footer li a:active {
+  background-color: #ccc;
+}
+
+.footnote {
+  border-top: 1px solid #ddd;
+  color: #999;
+  font-size: .8em;
+  padding: 1em 0 1.5em;
+}
+
+@media screen and (min-width: 600px) {
   body, html {
     font-size: 1.2em;
   }
+}
+
+@media screen and (min-width: 60em) {
   p, li {
     line-height: 1.7;
+  }
+  .home {
+    margin: 0 auto;
+    width: 32em;
   }
   .content {
     margin: 0 auto;
