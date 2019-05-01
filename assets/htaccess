@@ -2,13 +2,15 @@
 Header always set Strict-Transport-Security max-age=31536000
 
 # https://content-security-policy.com/
-Header set Content-Security-Policy "default-src 'self';"
+# Updated with most secure settings while Kirby still runs
+# s. https://forum.getkirby.com/t/can-not-re-install-kirby-after-forgot-password-invalid-csrf-token/14031
+Header set Content-Security-Policy "default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-ancestors 'none'"
 
 # (German) http://www.golem.de/news/cross-site-scripting-javascript-code-in-bilder-einbetten-1411-110264-2.html
 Header set X-Content-Type-Options "nosniff"
 
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
-Header always append X-Frame-Options NONE
+Header always set X-Frame-Options "deny"
 
 # http://stackoverflow.com/questions/9090577/what-is-the-http-header-x-xss-protection
 Header set x-xss-protection "1; mode=block"
