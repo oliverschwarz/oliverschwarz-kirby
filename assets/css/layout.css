@@ -71,11 +71,11 @@ html, body {
   font-smoothing: antialiased;
 }
 
-.content {
+.home, .content {
   margin: 0 1em;
 }
 
-h1, h2, h3, h4 {
+h2, h3, h4 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -258,10 +258,9 @@ a:visited {
   box-shadow: 0 2px 2px #999;
 }
 
-.home h1 {
-  color: #fff;
-  margin: -2.2em 0 1.2em 0;
-  text-align: center;
+h1 {
+  color: #000;
+  font-weight: normal;
 }
 
 /* Footer
