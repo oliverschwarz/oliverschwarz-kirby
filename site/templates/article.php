@@ -3,7 +3,7 @@
   <main class="content article">
 
     <header>
-      <h1><?php echo $page->title()->html() ?></h1>
+      <h1><?php echo $page->title()->html(); ?></h1>
     </header>
 
     <article>

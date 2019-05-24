@@ -79,7 +79,7 @@ h2, h3, h4 {
   font-weight: normal;
 }
 
-.homepage h2 {
+.homepage h2, .article-list h2 {
   border-bottom: 1px solid #ccc;
   color: #999;
   font-family: Arial, Helvetica, sans-serif;

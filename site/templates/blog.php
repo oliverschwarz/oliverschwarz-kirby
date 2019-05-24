@@ -13,7 +13,7 @@
       <h2><a href="<?php echo $article->url(); ?>"><?php echo $article->title()->html(); ?></a></h2>
       <p>
         <time datetime="<?php echo $article->date()->toDate('c'); ?>" pubdate><?php echo $article->date()->toDate('j. M y'); ?></time>
-        <?php echo $article->text()->excerpt(100) ?> &rarr; <a href="<?php echo $article->url(); ?>">read on!</a>
+        <?php echo $article->text()->excerpt(100); ?> &rarr; <a href="<?php echo $article->url(); ?>">read on!</a>
       </p>
     </article>
 

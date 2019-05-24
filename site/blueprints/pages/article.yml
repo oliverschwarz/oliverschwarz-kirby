@@ -34,3 +34,5 @@ columns:
             type: users
           tags:
             type: tags
+          excerpt:
+            type: text
