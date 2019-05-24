@@ -8,7 +8,7 @@
 
     <h1><?php echo $page->title()->html() ?></h1>
 
-    <article>
+    <article class="home">
       <?php echo $page->text()->kirbytext(); ?>
     </article>
 
