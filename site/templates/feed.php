@@ -4,7 +4,7 @@ $kirby->response()->type('txt');
 $kirby->response()->type('application/rss+xml');
 
 $options = [
-    'title'       => 'Latest articles on oliverschwarz.info',
+    'title'       => 'oliverschwarz.info Feed',
     'description' => 'Read the latest articles on agile organisations, boardgames, creating, running and software development.',
     'link'        => 'articles'
 ];
