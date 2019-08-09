@@ -1,6 +1,7 @@
 <nav class="nav-footer cf">
   <ul>
     <li><a href="<?php echo $site->url(); ?>">Home</a></li>
+    <li><a href="<?php echo $site->url(); ?>/feed/">RSS</a></li>
 <?php foreach ($site->children()->listed() as $item): ?>
     <li><?php echo $item->title()->link(); ?></li>
 <?php endforeach; ?>
