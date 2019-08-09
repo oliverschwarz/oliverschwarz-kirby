@@ -34,5 +34,7 @@
 
 <?php endif; ?>
 
+  <link rel="alternate" type="application/rss+xml" title="Latest articles" href="<?php echo site()->url(); ?>/feed/">
+
 </head>
 <body>
