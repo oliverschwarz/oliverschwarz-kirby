@@ -29,7 +29,11 @@
   <meta property="og:title" content="<?php echo $page->title()->html(); ?>">
   <meta property="og:type" content="article">
   <meta property="og:url" content="<?php echo $page->url(); ?>">
+<?php if ($image = $page->images()->first()): ?>
+  <meta property="og:image" content="<?php echo $image->url(); ?>">
+<?php else: ?>
   <meta property="og:image" content="https://oliverschwarz.info/home/oliver-c.jpg">
+<?php endif; ?>
   <meta property="og:description" content="<?php echo $page->excerpt()->html(); ?>">  
 
 <?php endif; ?>
