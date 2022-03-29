@@ -1,0 +1,10 @@
+#
+# Ignore KIRBY system folders
+#
+/content/
+/kirby/
+/media/
+/site/accounts/
+/site/cache/
+/site/config/
+/site/sessions/
