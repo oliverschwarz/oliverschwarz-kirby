@@ -1,9 +1,5 @@
 <?php snippet('meta'); ?>
 
-  <header class="home">
-    <img src="home/oliver-c.jpg" alt="Oliver auf der NightlyBuild 2016">
-  </header>
-
   <main class="content">
 
     <h1><?php echo $page->title()->html() ?></h1>
