@@ -1,5 +1,5 @@
 #
-# Ignore KIRBY system folders
+# Ignore KIRBY system folders and files
 #
 /content/
 /kirby/
@@ -8,3 +8,4 @@
 /site/cache/
 /site/config/
 /site/sessions/
+index.php
