@@ -9,3 +9,4 @@
 /site/config/
 /site/sessions/
 index.php
+.DS_Store
