@@ -1,12 +1,39 @@
-#
-# Ignore KIRBY system folders and files
-#
-/content/
-/kirby/
-/media/
-/site/accounts/
-/site/cache/
-/site/config/
-/site/sessions/
-index.php
+# System files
+# ------------
+Icon
 .DS_Store
+
+# Temporary files
+# ---------------
+/media/*
+
+# Lock files
+# ---------------
+.lock
+
+# Editors
+# (sensitive workspace files)
+# ---------------------------
+*.sublime-workspace
+/.vscode
+/.idea
+
+# -------------SECURITY-------------
+# NEVER publish these files via Git!
+# -------------SECURITY-------------
+
+# Site Files
+# ---------------
+/site/cache/
+/site/accounts/
+/site/sessions/
+/site/config/
+
+# Content
+# ---------------
+/content/
+
+# Kirby
+# ---------------
+/kirby/
+index.php
