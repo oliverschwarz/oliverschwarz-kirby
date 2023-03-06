@@ -3,11 +3,11 @@
 <head>
 
   <meta charset="utf-8">
-  <title><?php echo $site->title()->html(); ?></title>
+  <title><?= $site->title()->html() ?></title>
   <meta name="viewport" content="width=device-width,minimum-scale=1.0">
   <meta name="referrer" content="no-referrer">
   <link rel="canonical" href="https://oliverschwarz.info">
-  <?php echo css('assets/css/layout.css'); ?>
+  <?= css('assets/css/layout.css') ?>
 
   <link href="https://www.linkedin.com/in/-oschwarz/" rel="me">
   <link href="http://xing.to/oschwarz" rel="me">
@@ -26,15 +26,15 @@
 <?php else: ?>
 
   <meta name="twitter:card" value="summary">
-  <meta property="og:title" content="<?php echo $page->title()->html(); ?>">
+  <meta property="og:title" content="<?= $page->title()->html() ?>">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="<?php echo $page->url(); ?>">
+  <meta property="og:url" content="<?= echo $page->url() ?>">
 <?php if ($image = $page->images()->first()): ?>
-  <meta property="og:image" content="<?php echo $image->url(); ?>">
+  <meta property="og:image" content="<?= $image->url() ?>">
 <?php else: ?>
   <meta property="og:image" content="https://oliverschwarz.info/home/oliver-c.jpg">
 <?php endif; ?>
-  <meta property="og:description" content="<?php echo $page->excerpt()->html(); ?>">  
+  <meta property="og:description" content="<?= $page->excerpt()->html() ?>">  
 
 <?php endif; ?>
 
