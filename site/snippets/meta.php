@@ -28,7 +28,7 @@
   <meta name="twitter:card" value="summary">
   <meta property="og:title" content="<?= $page->title()->html() ?>">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="<?= echo $page->url() ?>">
+  <meta property="og:url" content="<?= $page->url() ?>">
 <?php if ($image = $page->images()->first()): ?>
   <meta property="og:image" content="<?= $image->url() ?>">
 <?php else: ?>
