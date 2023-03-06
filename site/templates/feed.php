@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * https://github.com/bnomei/kirby3-feed
+ */
+
 $kirby->response()->type('txt');
 $kirby->response()->type('application/rss+xml');
 
@@ -9,4 +13,4 @@ $options = [
     'link'        => 'articles'
 ];
 
-echo page('articles')->children()->visible()->flip()->limit(10)->feed($options);
+echo page('articles')->children()->listed()->flip()->limit(10)->feed($options);
