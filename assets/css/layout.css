@@ -63,9 +63,14 @@ img {
 /* oliverschwarz.info (custom)
    ========================================================================== */
 
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('../fonts/NunitoSans-ExtraLight.woff2') format('woff2');
+}
+
 html, body {
   color: #555;
-  font: 1em/1.5 Georgia, serif;
+  font: 1em/1.5 'Nunito Sans', Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
@@ -119,6 +124,11 @@ img {
 
 a:link {
   color: #354653;
+  background-color: #eee;
+}
+
+a:hover {
+  background-color: #ccc;
 }
 
 a:visited {

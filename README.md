@@ -24,3 +24,8 @@ Putting it all together will be a little bit of a manual thing for the time bein
 * https://getkirby.com
 * https://necolas.github.io/normalize.css/
 * https://oliverschwarz.info
+* https://github.com/googlefonts/NunitoSans
+
+## Kirby tutorial
+
+* On YouTube: [About site.txt](https://youtu.be/zUPqqrhbcR8?t=794)
