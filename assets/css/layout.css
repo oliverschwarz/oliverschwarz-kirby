@@ -42,12 +42,20 @@ https://coolors.co/0d1821-344966-e6aace-f0f4ef-bfcc94
   --color-prussian-blue:    #233043;
   --color-lavender-pink:    #E6AACE;
   --color-baby-powder:      #F0F4EF;
+  --color-light-yellow:     #FFFF99;
   --color-sage:             #BFCC94;
+}
+
+/*  Font (replacement for Geeorgia)
+    Source: https://github.com/solmatas/BitterPro */
+@font-face {
+  font-family: 'Nunito Light';
+  src: url('../fonts/Nunito-ExtraLight.woff2') format('woff2');
 }
 
 html, body {
   color: var(--color-rich-black);
-  font: 1em/1.7 Georgia, serif;
+  font: 1em/2 'Nunito Light', Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
@@ -73,6 +81,11 @@ h2, h3, h4 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
+}
+
+.homepage strong {
+  background-color: var(--color-light-yellow);
+  font-weight: normal;
 }
 
 figure {
@@ -310,6 +323,6 @@ h1 {
   }
   .content {
     margin: 0 auto;
-    width: 30em;
+    width: 32em;
   }
 }
