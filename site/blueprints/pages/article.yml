@@ -27,12 +27,17 @@ columns:
         type: fields
         fields:
           date:
+            label: Published on
             type: date
             time: true
-            default: now
+          images:
+            label: Images
+            type: files
           author:
             type: users
           tags:
             type: tags
           excerpt:
-            type: text
+            type: textarea
+            size: small
+            buttons: false
