@@ -38,7 +38,8 @@ https://coolors.co/0d1821-344966-e6aace-f0f4ef-bfcc94
     */
 :root {
   --color-rich-black:       #0D1821;
-  --color-indigo-dye:       #FDEBD3;
+  --color-indigo-dye:       #344966;
+  --color-prussian-blue:    #233043;
   --color-lavender-pink:    #E6AACE;
   --color-baby-powder:      #F0F4EF;
   --color-sage:             #BFCC94;
@@ -99,11 +100,11 @@ img {
 }
 
 a:link {
-  color: #354653;
+  color: var(--color-indigo-dye);
 }
 
 a:visited {
-  color: #6788A1;
+  color: var(--color-prussian-blue);
 }
 
 /* micro-clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
