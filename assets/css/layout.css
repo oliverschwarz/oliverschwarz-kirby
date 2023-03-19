@@ -46,16 +46,9 @@ https://coolors.co/0d1821-344966-e6aace-f0f4ef-bfcc94
   --color-sage:             #BFCC94;
 }
 
-/*  Font (replacement for Geeorgia)
-    Source: https://github.com/solmatas/BitterPro */
-@font-face {
-  font-family: 'Nunito Light';
-  src: url('../fonts/Nunito-ExtraLight.woff2') format('woff2');
-}
-
 html, body {
   color: var(--color-rich-black);
-  font: 1em/2 'Nunito Light', Georgia, serif;
+  font: 1em/1.7 'Helvetica Neue', Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
@@ -65,27 +58,19 @@ html, body {
   margin: 0 1em;
 }
 
-h2, h3, h4 {
-  font-weight: normal;
-}
-
-.homepage h2, .article-list h2 {
+h2.division, .article h3 {
   border-bottom: 1px solid #ccc;
   color: #999;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: .8em;
+  font-weight: normal;
+  font-size: .7em;
   letter-spacing: .3em;
   margin-top: 6em;
-  text-transform: uppercase;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-smoothing: antialiased;
+  text-transform: uppercase;  
 }
 
 .homepage strong {
   background-color: var(--color-light-yellow);
-  font-weight: normal;
 }
 
 figure {
@@ -135,7 +120,6 @@ a:visited {
    ========================================================================== */
 
 .article-list h3 {
-  font-weight: normal;
   margin: .5em 0 0;
 }
 
@@ -154,15 +138,8 @@ a:visited {
   padding: 0;
 }
 
-.article-list h2 a,
-.article-list h3 a,
-.page-article-list h2 a {
-  text-decoration: none;
-}
-
 .page-article-list h2 {
   font-size: 1.2em;
-  font-weight: normal;
   margin: 1.5em 0 0;
 }
 
@@ -177,7 +154,6 @@ a:visited {
 .article header h1,
 .article h2,
 .article h3 {
-  font-weight: normal;
   line-height: 1.25;
 }
 
@@ -253,7 +229,6 @@ a:visited {
 
 h1 {
   color: #000;
-  font-weight: normal;
   margin-top: 2em;
   margin-bottom: 1em;
 }
@@ -314,9 +289,6 @@ h1 {
    ========================================================================== */
 
 @media screen and (min-width: 60em) {
-  p, li {
-    line-height: 1.7;
-  }
   .home {
     margin: 0 auto;
     width: 32em;
