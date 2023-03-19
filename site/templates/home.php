@@ -1,12 +1,20 @@
 <?php snippet('meta'); ?>
 
-  <main class="content">
+  <main>
 
     <h1><?php echo $page->title()->html() ?></h1>
 
-    <article class="homepage">
-      <?php echo $page->text()->kirbytext(); ?>
-    </article>
+    <section class="highlight">
+      <p><?= $page->intro() ?></p>
+    </section>
+
+    <section class="slogan">
+      <p><strong><?= $page->slogan() ?></strong></p>
+    </section>
+
+    <section class="description">
+      <?= $page->text()->kirbytext() ?>
+    </section>
 
     <section class="article-list">
       <h2>Latest articles</h2>
@@ -18,7 +26,6 @@
         </li>
 <?php endforeach; ?>
       </ul>
-      <p class="cta"><a href="<?php echo page('articles')->url(); ?>">See all articles</a>... &rarr;</p>
     </section>
 
   </main>
